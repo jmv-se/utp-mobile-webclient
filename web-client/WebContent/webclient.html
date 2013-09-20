@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Web Client UTP Mobile</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+
+</head>
+<body>
+
+	<h1>Web Client UTP Mobile</h1>
+
+	<div class="container">
+		<div class="span12">
+			<button id="botonCargar" class="btn btn-primary">Mostrar Formulario</button>
+		</div>
+		<div id="alumnoForm" class="row-fluid"></div>
+	</div>
+
+
+	
+
+	<!-- jquery javascript -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<!-- bootstrap javascript -->
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+		$('#botonCargar').click(function() {
+
+			$('#alumnoForm').load('alumnoForm.html');
+		});	
+	</script>
+
+</body>
+</html>

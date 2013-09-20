@@ -1,0 +1,35 @@
+<legend>Alumno</legend>
+
+<div class="span12">
+	<label>Alumno Id</label>
+	<input id='id' type="text" name="id" placeholder="Ingrese su id...">
+</div>
+
+<div class="span12">
+	<label>Nombre Id</label>
+	<input id="nombre" type="text" name="nombre" placeholder="Ingrese su nombre...">
+</div>
+
+<div class="span12">
+	<button id="consultarBtn" type="button" class="btn">Consultar</button>
+</div>
+
+<script type="text/javascript">
+	
+	$('#consultarBtn').click(function() {
+
+		var id = $('#id').val();
+
+		$.ajax('http://localhost:8080/WS_UTP_Mobile/alumnos/' + id)
+		    .done(function(json) {
+
+		    	console.log({'json': json, 'arguments': arguments});
+		    	alert("success");
+
+		    	$('#id').val(json.id);
+		    	$('#nombre').val(json.nombre);
+
+			}).fail(function() { alert("error"); })
+		    .always(function() { alert("complete"); });
+	})
+</script>
